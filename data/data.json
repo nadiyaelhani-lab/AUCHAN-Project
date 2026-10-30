@@ -1,0 +1,27 @@
+
+[
+  {"id":1,"nom":"Lait demi-écrémé","categorie":"Alimentation","prix":12,"image":"https://placehold.co/400x300?text=Lait"},
+  {"id":2,"nom":"Beurre doux","categorie":"Alimentation","prix":24,"image":"https://placehold.co/400x300?text=Beurre"},
+  {"id":3,"nom":"Fromage","categorie":"Alimentation","prix":35,"image":"https://placehold.co/400x300?text=Fromage"},
+  {"id":4,"nom":"Riz basmati","categorie":"Alimentation","prix":29,"image":"https://placehold.co/400x300?text=Riz"},
+
+  {"id":5,"nom":"T-shirt coton","categorie":"Mode","prix":89,"image":"https://placehold.co/400x300?text=T-shirt"},
+  {"id":6,"nom":"Jean classique","categorie":"Mode","prix":179,"image":"https://placehold.co/400x300?text=Jean"},
+  {"id":7,"nom":"Sweat à capuche","categorie":"Mode","prix":199,"image":"https://placehold.co/400x300?text=Sweat"},
+  {"id":8,"nom":"Baskets sport","categorie":"Mode","prix":249,"image":"https://placehold.co/400x300?text=Baskets"},
+
+  {"id":9,"nom":"Casque Bluetooth","categorie":"Électronique","prix":199,"image":"https://placehold.co/400x300?text=Casque"},
+  {"id":10,"nom":"Souris sans fil","categorie":"Électronique","prix":99,"image":"https://placehold.co/400x300?text=Souris"},
+  {"id":11,"nom":"Clavier USB","categorie":"Électronique","prix":149,"image":"https://placehold.co/400x300?text=Clavier"},
+  {"id":12,"nom":"Enceinte portable","categorie":"Électronique","prix":259,"image":"https://placehold.co/400x300?text=Enceinte"},
+
+  {"id":13,"nom":"Lampe de bureau","categorie":"Maison","prix":129,"image":"https://placehold.co/400x300?text=Lampe"},
+  {"id":14,"nom":"Coussin décoratif","categorie":"Maison","prix":79,"image":"https://placehold.co/400x300?text=Coussin"},
+  {"id":15,"nom":"Vase céramique","categorie":"Maison","prix":119,"image":"https://placehold.co/400x300?text=Vase"},
+  {"id":16,"nom":"Plaid doux","categorie":"Maison","prix":159,"image":"https://placehold.co/400x300?text=Plaid"},
+
+  {"id":17,"nom":"Gel douche","categorie":"Beauté","prix":39,"image":"https://placehold.co/400x300?text=Gel+douche"},
+  {"id":18,"nom":"Shampoing doux","categorie":"Beauté","prix":45,"image":"https://placehold.co/400x300?text=Shampoing"},
+  {"id":19,"nom":"Crème hydratante","categorie":"Beauté","prix":89,"image":"https://placehold.co/400x300?text=Creme"},
+  {"id":20,"nom":"Savon naturel","categorie":"Beauté","prix":25,"image":"https://placehold.co/400x300?text=Savon"}
+]
