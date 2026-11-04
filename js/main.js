@@ -19,6 +19,15 @@ const filtresCategories = document.getElementById("filtres-categories");
 
 let tousLesProduits = [];
 let categorieActive = "Toutes";
+let pageActuelle = 1;
+const produitsParPage = 8;
+// Fonction de pagination
+const afficherPagination = (nombrePages) => {
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = "";
+
+    if (nombrePages <= 1) return;
+};
 
 // Actualiser le catalogue
 const actualiserCatalogue = () => {
@@ -34,9 +43,14 @@ const actualiserCatalogue = () => {
             produit.categorie === categorieActive;
 
         return correspondNom && correspondCategorie;
+        
     });
+    const nombrePages = Math.ceil(resultats.length / produitsParPage);
+    const debut = (pageActuelle - 1) * produitsParPage;
+const fin = debut + produitsParPage;
+const produitsPage = resultats.slice(debut, fin);
 
-    afficherProduits(resultats);
+    afficherProduits(produitsPage);
 
     if (resultats.length === 0) {
         document.getElementById("catalogue").innerHTML =
@@ -78,17 +92,17 @@ const afficherCategories = () => {
 // Recherche instantanée
 recherche.addEventListener("input", actualiserCatalogue);
 
-// Charger les produits
-const afficherDonnees = async () => {
-    try {
-        tousLesProduits = await chargerProduits();
+const afficherDonnees = () => {
+    chargerProduits()
+        .then(produits => {
+            tousLesProduits = produits;
 
-        afficherCategories();
-        actualiserCatalogue();
-
-    } catch (erreur) {
-        console.error("Erreur de chargement :", erreur);
-    }
+            afficherCategories();
+            actualiserCatalogue();
+        })
+        .catch(erreur => {
+            console.error("Erreur de chargement :", erreur);
+        });
 };
 
 afficherDonnees();
