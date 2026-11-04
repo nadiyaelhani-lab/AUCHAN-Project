@@ -1,6 +1,4 @@
-export const chargerProduits = async () => {
-    const reponse = await fetch("./data/data.json");
-    const produits = await reponse.json();
-
-    return produits;
+export const chargerProduits = () => {
+    return fetch("./data/data.json")
+        .then(reponse => reponse.json());
 };
