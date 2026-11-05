@@ -20,14 +20,44 @@ const filtresCategories = document.getElementById("filtres-categories");
 let tousLesProduits = [];
 let categorieActive = "Toutes";
 let pageActuelle = 1;
-const produitsParPage = 8;
+let produitsParPage = 8;
 // Fonction de pagination
+
 const afficherPagination = (nombrePages) => {
     const pagination = document.getElementById("pagination");
     pagination.innerHTML = "";
 
     if (nombrePages <= 1) return;
+
+    // Bouton Précédent
+    const precedent = document.createElement("button");
+    precedent.textContent = "← Précédent";
+    precedent.type = "button";
+    precedent.disabled = pageActuelle === 1;
+    precedent.className = "px-4 py-2 bg-white rounded-lg disabled:opacity-40";
+
+    precedent.addEventListener("click", () => {
+        pageActuelle--;
+        actualiserCatalogue();
+    });
+
+    // Bouton Suivant
+    const suivant = document.createElement("button");
+    suivant.textContent = "Suivant →";
+    suivant.type = "button";
+    suivant.disabled = pageActuelle === nombrePages;
+    suivant.className = "px-4 py-2 bg-white rounded-lg disabled:opacity-40";
+
+    suivant.addEventListener("click", () => {
+        pageActuelle++;
+        actualiserCatalogue();
+    });
+
+    // Afficher les boutons
+    pagination.append(precedent, suivant);
 };
+
+
 
 // Actualiser le catalogue
 const actualiserCatalogue = () => {
@@ -51,6 +81,7 @@ const fin = debut + produitsParPage;
 const produitsPage = resultats.slice(debut, fin);
 
     afficherProduits(produitsPage);
+afficherPagination(nombrePages);
 
     if (resultats.length === 0) {
         document.getElementById("catalogue").innerHTML =
@@ -91,6 +122,13 @@ const afficherCategories = () => {
 
 // Recherche instantanée
 recherche.addEventListener("input", actualiserCatalogue);
+const taillePage = document.getElementById("taille-page");
+
+taillePage.addEventListener("change", () => {
+    produitsParPage = Number(taillePage.value);
+    pageActuelle = 1;
+    actualiserCatalogue();
+});
 
 const afficherDonnees = () => {
     chargerProduits()
