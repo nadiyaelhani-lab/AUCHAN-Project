@@ -1,115 +1,51 @@
-
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>AUCHAN'Co - Boutique</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <title>AUCHAN'Co - Boutique</title>
   <script type="module" src="./js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="bg-[#F5F8ED] text-[#183F35]">
+<body>   
+<header>
+<nav class="flex items-center justify-between p-4 bg-[#F5F8ED] text-[#183F35]"> 
+   <h1 class="text-2xl font-bold tracking-tight">AUCHAN’Co</h1>
 
-  <!-- HEADER -->
-  <header class="bg-white">
-
-    <nav class="flex items-center justify-between p-4 bg-[#F5F8ED]">
-
-      <h1 class="text-2xl font-bold tracking-tight">
-        AUCHAN’Co
-      </h1>
-
-      <!-- Navigation desktop -->
-      <div class="hidden md:flex items-center gap-6 font-medium">
-
-        <a href="#accueil"
-           class="hover:text-[#FF805F] transition-colors">
-          Accueil
-        </a>
-
-        <a href="#produits"
-           class="hover:text-[#FF805F] transition-colors">
-          Produits
-        </a>
-
-        <a href="#contact"
-           class="hover:text-[#FF805F] transition-colors">
-          Contact
-        </a>
-
-        <a href="#panier"
-           class="hover:text-[#FF805F] transition-colors">
-          Panier
-        </a>
-
-      </div>
-
-      <!-- Bouton mobile -->
-      <button
-        type="button"
-        id="menu-mobile"
-        class="block md:hidden text-2xl"
-        aria-label="Ouvrir le menu"
-        aria-controls="navigation-mobile"
-        aria-expanded="false">
-        ☰
-      </button>
-
-    </nav>
-
-    <!-- Navigation mobile -->
-    <div
-      id="navigation-mobile"
-      class="hidden md:hidden p-4 space-y-3 bg-[#F5F8ED] [&>a]:block">
-
-      <a href="#accueil">Accueil</a>
-      <a href="#produits">Produits</a>
-      <a href="#contact">Contact</a>
-      <a href="#panier">Panier</a>
-
+   <div class="hidden md:flex items-center gap-6 font-medium">
+<a href="#accueil" class="text-[#183F35] font-semibold hover:text-[#FF805F] transition-colors">Accueil</a>
+<a href="#produits" class="text-[#183F35] font-semibold hover:text-[#FF805F] transition-colors">Produits</a>
+<a href="#contact" class="text-[#183F35] font-semibold hover:text-[#FF805F] transition-colors">Contact</a>
+<a href="#panier" class="text-[#183F35] font-semibold hover:text-[#FF805F] transition-colors">Panier</a>
     </div>
 
-  </header>
+    <button type="button" id="menu-mobile"
+            class="block md:hidden"
+            aria-controls="navigation-mobile"
+            aria-expanded="false">
+      ☰
+    </button>
+  </nav>
 
+<div id="navigation-mobile" class="hidden md:hidden p-4 space-y-3 [&>a]:block">
+      <a href="#accueil">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#contact">Contact</a>
+    <a href="#panier">Panier</a>
+  </div>
+</header>
 
   <main>
 
-    <!-- ACCUEIL -->
-    <section id="accueil" class="max-w-7xl mx-auto px-4 py-12">
-
-      <div class="bg-white rounded-2xl p-6 md:p-12">
-
-        <h2 class="text-3xl md:text-5xl font-bold mb-4">
-          Bienvenue chez AUCHAN’Co
-        </h2>
-
-        <p class="text-gray-600 mb-6">
-          Vos courses, avec le sourire.
-          Découvrez nos produits au meilleur prix.
-        </p>
-
-        <a href="#produits"
-           class="inline-block bg-[#183F35] text-white px-6 py-3 rounded-lg hover:bg-[#31684C] transition-colors">
-          Découvrir les produits
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- CATALOGUE -->
-    <section id="produits" class="max-w-7xl mx-auto px-4 py-10">
-
-      <h2 class="text-3xl font-bold mb-6">
-        Nos produits
-      </h2>
-
-      <div class="mb-6 space-y-4">
+    <h1>Bienvenue chez AUCHAN'Co.</h1>
+<section id="produits" class="max-w-7xl mx-auto px-4 py-10">
+  
+<h2 class="text-3xl font-bold text-[#183F35] mb-6">Nos produits</h2>
+  <div class="mb-6 space-y-4">
 
         <input
           type="search"
@@ -126,178 +62,45 @@
         </div>
 
       </div>
+  <div class="flex gap-3 mb-6">
+  <button type="button" id="vue-grille"
+    class="bg-[#183F35] text-white px-4 py-2 rounded-lg">
+    Grille
+  </button>
 
+  <button type="button" id="vue-liste"
+    class="bg-[#F5F8ED] text-[#183F35] px-4 py-2 rounded-lg">
+    Liste
+  </button>
+</div>
+<div id="catalogue" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+  </div>
+  <div class="flex items-center justify-center gap-3 mt-6">
+  <label for="taille-page">Produits par page :</label>
 
-      <!-- AFFICHAGE GRILLE / LISTE -->
-      <div class="flex gap-3 mb-6">
-
-        <button
-          type="button"
-          id="vue-grille"
-          class="bg-[#183F35] text-white px-4 py-2 rounded-lg">
-          Grille
-        </button>
-
-        <button
-          type="button"
-          id="vue-liste"
-          class="bg-white text-[#183F35] px-4 py-2 rounded-lg">
-          Liste
-        </button>
-
-      </div>
-
-
-      <!-- CATALOGUE DYNAMIQUE -->
-      <div
-        id="catalogue"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      </div>
-
-
-      <!-- PAGINATION -->
-      <div
-        id="pagination"
-        class="flex justify-center items-center gap-3 mt-8">
-      </div>
-
-    </section>
-
-
-    <!-- PANIER -->
-    <section id="panier" class="max-w-7xl mx-auto px-4 py-10">
-
-      <h2 class="text-3xl font-bold mb-6">
-        Mon panier
-      </h2>
-
-      <div class="bg-white rounded-xl p-6">
-
-        <!-- Zone de dépôt des produits -->
-        <div
-          id="zone-panier"
-          class="border-2 border-dashed border-[#183F35] rounded-lg p-8 text-center mb-6">
-
-          <p class="text-gray-600">
-            Glissez vos produits ici pour les ajouter au panier.
-          </p>
-
-        </div>
-
-        <!-- Articles du panier -->
-        <div id="articles-panier" class="space-y-4">
-        </div>
-
-        <!-- Total -->
-        <div class="border-t mt-6 pt-4 flex justify-between items-center">
-
-          <span class="font-bold text-lg">
-            Total :
-          </span>
-
-          <span id="total-panier" class="font-bold text-xl">
-            0 DH
-          </span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 py-10">
-
-      <h2 class="text-3xl font-bold mb-6">
-        Contactez-nous
-      </h2>
-
-      <form id="form-contact"
-            class="bg-white rounded-xl p-6 space-y-4">
-
-        <div>
-          <label for="nom" class="block mb-2 font-medium">
-            Nom
-          </label>
-
-          <input
-            type="text"
-            id="nom"
-            name="nom"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3">
-        </div>
-
-        <div>
-          <label for="email" class="block mb-2 font-medium">
-            Email
-          </label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3">
-        </div>
-
-        <div>
-          <label for="message" class="block mb-2 font-medium">
-            Message
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full border border-gray-300 rounded-lg p-3"></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="bg-[#183F35] text-white px-6 py-3 rounded-lg hover:bg-[#31684C] transition-colors">
-          Envoyer
-        </button>
-
-        <p id="message-formulaire" role="status" aria-live="polite"></p>
-
-      </form>
-
-    </section>
-
+  <select id="taille-page" class="border rounded-lg p-2 bg-white">
+    <option value="4">4</option>
+    <option value="8" selected>8</option>
+    <option value="12">12</option>
+  </select>
+</div>
+<div id="pagination" class="flex justify-center items-center gap-3 mt-8">
+</div>
+</section>
   </main>
-
-
-  <!-- FOOTER -->
-  <footer class="bg-[#183F35] text-white p-6 mt-10">
-
-    <div class="max-w-7xl mx-auto">
-
-      <h2 class="text-xl font-bold">
-        AUCHAN’Co
-      </h2>
-
-      <p class="mt-2">
-        Vos courses, avec le sourire.
-      </p>
-
-      <div class="flex flex-wrap gap-4 mt-4">
-
-        <a href="#accueil">Accueil</a>
-        <a href="#produits">Produits</a>
-        <a href="#contact">Contact</a>
-
-      </div>
-
-      <p class="mt-6 text-sm">
-        © 2026 AUCHAN’Co — Tous droits réservés.
-      </p>
-
-    </div>
-
+  <footer>
+<div class="bg-[#F5F8ED] text-[#183F35] p-6">
+  <h2 class="text-xl font-bold">AUCHAN’Co</h2>
+  <p>Vos courses, avec le sourire.</p>
+  <div class="flex flex-wrap gap-4 mt-4">
+  <a href="#accueil">Accueil</a>
+  <a href="#produits">Produits</a>
+  <a href="#contact">Contact</a>
+</div>
+  <p class="mt-4 text-sm">© 2026 AUCHAN’Co</p>
+</div>
   </footer>
-
 </body>
+
 </html>
