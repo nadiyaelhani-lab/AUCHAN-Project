@@ -61,7 +61,7 @@
     "nom": "Casque Bluetooth",
     "categorie": "Électronique",
     "prix": 199,
-    "image": "./images/casque.png"
+    "image": "./images/casque.jpg"
   },
   {
     "id": 10,
@@ -82,7 +82,7 @@
     "nom": "Enceinte portable",
     "categorie": "Électronique",
     "prix": 259,
-    "image": "./images/enceinte.JPG"
+    "image": "./images/enceintePortable.jpg"
   },
   {
     "id": 13,
@@ -110,14 +110,14 @@
     "nom": "Plaid doux",
     "categorie": "Maison",
     "prix": 159,
-    "image": "./images/plaid.JPG"
+    "image": "./images/plaid.png"
   },
   {
     "id": 17,
     "nom": "Gel douche",
     "categorie": "Beauté",
     "prix": 39,
-    "image": "./images/gel_douche.JPG"
+    "image": "./images/gel-douche.JPG"
   },
   {
     "id": 18,
