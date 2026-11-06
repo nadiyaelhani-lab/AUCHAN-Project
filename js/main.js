@@ -144,3 +144,30 @@ const afficherDonnees = () => {
 };
 
 afficherDonnees();
+const catalogue = document.getElementById("catalogue");
+
+catalogue.addEventListener("dragstart", (event) => {
+    const carte = event.target.closest("article[data-id]");
+
+    if (!carte) return;
+
+    event.dataTransfer.setData("text/plain", carte.dataset.id);
+});
+const zonePanier = document.getElementById("zone-panier");
+
+zonePanier.addEventListener("dragover", (event) => {
+    event.preventDefault();
+});
+zonePanier.addEventListener("drop", (event) => {
+    event.preventDefault();
+
+    const idProduit = event.dataTransfer.getData("text/plain");
+
+    const produit = tousLesProduits.find(
+        produit => String(produit.id) === idProduit
+    );
+
+    if (!produit) return;
+
+    console.log("Produit déposé :", produit.nom);
+});
