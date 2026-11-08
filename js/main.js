@@ -2,7 +2,6 @@
 import { afficherProduits } from "./products.js";
 import { chargerProduits } from "./api.js";
 
-// Menu mobile
 const bouton = document.getElementById("menu-mobile");
 const menu = document.getElementById("navigation-mobile");
 
@@ -13,7 +12,6 @@ bouton.addEventListener("click", () => {
     bouton.setAttribute("aria-expanded", !estCache);
 });
 
-// Recherche et filtres
 const recherche = document.getElementById("recherche-produits");
 const filtresCategories = document.getElementById("filtres-categories");
 
@@ -21,7 +19,7 @@ let tousLesProduits = [];
 let categorieActive = "Toutes";
 let pageActuelle = 1;
 let produitsParPage = 8;
-// Fonction de pagination
+let produitsPanier = [];
 
 const afficherPagination = (nombrePages) => {
     const pagination = document.getElementById("pagination");
@@ -29,7 +27,6 @@ const afficherPagination = (nombrePages) => {
 
     if (nombrePages <= 1) return;
 
-    // Bouton Précédent
     const precedent = document.createElement("button");
     precedent.textContent = "← Précédent";
     precedent.type = "button";
@@ -41,7 +38,6 @@ const afficherPagination = (nombrePages) => {
         actualiserCatalogue();
     });
 
-    // Bouton Suivant
     const suivant = document.createElement("button");
     suivant.textContent = "Suivant →";
     suivant.type = "button";
@@ -53,13 +49,11 @@ const afficherPagination = (nombrePages) => {
         actualiserCatalogue();
     });
 
-    // Afficher les boutons
     pagination.append(precedent, suivant);
 };
 
 
 
-// Actualiser le catalogue
 const actualiserCatalogue = () => {
     const texte = recherche.value.trim().toLocaleLowerCase("fr");
 
@@ -89,7 +83,6 @@ afficherPagination(nombrePages);
     }
 };
 
-// Créer les boutons de catégories
 const afficherCategories = () => {
     const categories = [
         "Toutes",
@@ -120,7 +113,6 @@ const afficherCategories = () => {
     });
 };
 
-// Recherche instantanée
 recherche.addEventListener("input", actualiserCatalogue);
 const taillePage = document.getElementById("taille-page");
 
