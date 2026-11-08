@@ -5,42 +5,119 @@
     "nom": "Lait demi-écrémé",
     "categorie": "Alimentation",
     "prix": 12,
-    "image": "./images/lait.JPG"
+    "image": "./images/lait.jpg"
   },
   {
     "id": 2,
     "nom": "Beurre doux",
     "categorie": "Alimentation",
     "prix": 24,
-    "image": "./images/beurre.JPG"
+    "image": "./images/beurre.jpg"
   },
   {
     "id": 3,
     "nom": "Fromage",
     "categorie": "Alimentation",
     "prix": 35,
-    "image": "./images/fromage.JPG"
+    "image": "./images/fromage.jpg"
   },
   {
     "id": 4,
     "nom": "Riz basmati",
     "categorie": "Alimentation",
     "prix": 29,
-    "image": "./images/riz.JPG"
+    "image": "./images/riz.jpg"
   },
   {
     "id": 5,
     "nom": "T-shirt coton",
     "categorie": "Mode",
     "prix": 89,
-    "image": "./images/tshirt.JPG"
+    "image": "./images/tshirt.jpg"
   },
   {
     "id": 6,
     "nom": "Jean classique",
     "categorie": "Mode",
     "prix": 179,
-    "image": "./images/jean.JPG"
+    "image": "./images/jean.jpg"
+  },
+  {
+    "id": 7,
+    "nom": "Sweat à capuche",
+    "categorie": "Mode",
+    "prix": 199,
+    "image": "./images/sweat.png"
+  },
+  {
+    "id": 8,
+    "nom": "Baskets sport",
+    "categorie": "Mode",
+    "prix": 249,
+    "image": "./images/bascket01.png"
+  },
+  {
+    "id": 9,
+    "nom": "Casque Bluetooth",
+    "categorie": "Électronique",
+    "prix": 199,
+    "image": "./images/casque.jpg"
+  },
+  {
+    "id": 10,
+    "nom": "Souris sans fil",
+    "categorie": "Électronique",
+    "prix": 99,
+    "image": "./images/souris.png"
+  },
+  {
+    "id": 11,
+    "nom": "Clavier USB",
+    "categorie": "Électronique",
+    "prix": 149,
+    "image": "./images/clavier.
+[
+  {
+    "id": 1,
+    "nom": "Lait demi-écrémé",
+    "categorie": "Alimentation",
+    "prix": 12,
+    "image": "./images/lait.jpg"
+  },
+  {
+    "id": 2,
+    "nom": "Beurre doux",
+    "categorie": "Alimentation",
+    "prix": 24,
+    "image": "./images/beurre.jpg"
+  },
+  {
+    "id": 3,
+    "nom": "Fromage",
+    "categorie": "Alimentation",
+    "prix": 35,
+    "image": "./images/fromage.jpg"
+  },
+  {
+    "id": 4,
+    "nom": "Riz basmati",
+    "categorie": "Alimentation",
+    "prix": 29,
+    "image": "./images/riz.jpg"
+  },
+  {
+    "id": 5,
+    "nom": "T-shirt coton",
+    "categorie": "Mode",
+    "prix": 89,
+    "image": "./images/tshirt.jpg"
+  },
+  {
+    "id": 6,
+    "nom": "Jean classique",
+    "categorie": "Mode",
+    "prix": 179,
+    "image": "./images/jean.jpg"
   },
   {
     "id": 7,
@@ -89,21 +166,21 @@
     "nom": "Lampe de bureau",
     "categorie": "Maison",
     "prix": 129,
-    "image": "./images/lampe.JPG"
+    "image": "./images/lampe.jpg"
   },
   {
     "id": 14,
     "nom": "Coussin décoratif",
     "categorie": "Maison",
     "prix": 79,
-    "image": "./images/coussin.JPG"
+    "image": "./images/coussin.jpg"
   },
   {
     "id": 15,
     "nom": "Vase céramique",
     "categorie": "Maison",
     "prix": 119,
-    "image": "./images/vase.JPG"
+    "image": "./images/vase.jpg"
   },
   {
     "id": 16,
@@ -117,27 +194,93 @@
     "nom": "Gel douche",
     "categorie": "Beauté",
     "prix": 39,
-    "image": "./images/gel-douche.JPG"
+    "image": "./images/gel-douche.jpg"
   },
   {
     "id": 18,
     "nom": "Shampoing doux",
     "categorie": "Beauté",
     "prix": 45,
-    "image": "./images/shampoing.JPG"
+    "image": "./images/shampoing.jpg"
   },
   {
     "id": 19,
     "nom": "Crème hydratante",
     "categorie": "Beauté",
     "prix": 89,
-    "image": "./images/creme.JPG"
+    "image": "./images/creme.jpg"
   },
   {
     "id": 20,
     "nom": "Savon naturel",
     "categorie": "Beauté",
     "prix": 25,
-    "image": "./images/savon.JPG"
+    "image": "./images/savon.jpg"
+  }
+]
+"
+  },
+  {
+    "id": 12,
+    "nom": "Enceinte portable",
+    "categorie": "Électronique",
+    "prix": 259,
+    "image": "./images/enceintePortable.jpg"
+  },
+  {
+    "id": 13,
+    "nom": "Lampe de bureau",
+    "categorie": "Maison",
+    "prix": 129,
+    "image": "./images/lampe.jpg"
+  },
+  {
+    "id": 14,
+    "nom": "Coussin décoratif",
+    "categorie": "Maison",
+    "prix": 79,
+    "image": "./images/coussin.jpg"
+  },
+  {
+    "id": 15,
+    "nom": "Vase céramique",
+    "categorie": "Maison",
+    "prix": 119,
+    "image": "./images/vase.jpg"
+  },
+  {
+    "id": 16,
+    "nom": "Plaid doux",
+    "categorie": "Maison",
+    "prix": 159,
+    "image": "./images/plaid.png"
+  },
+  {
+    "id": 17,
+    "nom": "Gel douche",
+    "categorie": "Beauté",
+    "prix": 39,
+    "image": "./images/gel-douche.jpg"
+  },
+  {
+    "id": 18,
+    "nom": "Shampoing doux",
+    "categorie": "Beauté",
+    "prix": 45,
+    "image": "./images/shampoing.jpg"
+  },
+  {
+    "id": 19,
+    "nom": "Crème hydratante",
+    "categorie": "Beauté",
+    "prix": 89,
+    "image": "./images/creme.jpg"
+  },
+  {
+    "id": 20,
+    "nom": "Savon naturel",
+    "categorie": "Beauté",
+    "prix": 25,
+    "image": "./images/savon.jpg"
   }
 ]
